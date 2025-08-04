@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniConnect - Student Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/graduation-cap.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <span>UniConnect</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#premium">Premium</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+            <span>Dark Mode</span>
+        </button>
+    </header>
+
+    <div class="container">
+        <div class="dashboard">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="user-profile">
+                    <div class="avatar">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="user-info">
+                        <h2>John Dixon</h2>
+                        <p>Computer Science and Engineering</p>
+                        <p>ID: 2410030278</p>
+                    </div>
+                </div>
+                <div class="sidebar-nav">
+                    <a href="#home" class="active"><i class="fas fa-home"></i> Dashboard</a>
+                    <a href="#notes"><i class="fas fa-book"></i> Course Notes</a>
+                    <a href="#assignments"><i class="fas fa-tasks"></i> Assignments</a>
+                    <a href="studyResource.html"><i class="fas fa-file-alt"></i> Study Resources</a>
+                    <a href="#previous"><i class="fas fa-history"></i> Previous Papers</a>
+                    <a href="#grades"><i class="fas fa-chart-line"></i> Grades & Progress</a>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Home / Academic Overview -->
+                <div class="tab-content active" id="homeContent">
+                    <h2 class="section-title"><i class="fas fa-home"></i> Academic Overview</h2>
+                    <p>Welcome back, John Dixon! Here's your academic overview for this semester.</p>
+                    
+                    <div class="resources-grid">
+                        <!-- Subject Cards -->
+                        <div class="resource-card">
+                            <div class="card-header"><i class="fas fa-database"></i><h3>Data Structures & Algorithms</h3></div>
+                            <div class="card-body">
+                                <p>Lecture notes, syllabus & question bank for DSA.</p>
+                                <div class="card-buttons">
+                                    <a href="#" class="btn">Syllabus</a>
+                                    <a href="#" class="btn">Notes</a>
+                                    <a href="#" class="btn">Question Bank</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="card-header"><i class="fas fa-microchip"></i><h3>Digital Electronics & Communication</h3></div>
+                            <div class="card-body">
+                                <p>Complete DECO syllabus, lecture notes & question bank.</p>
+                                <div class="card-buttons">
+                                    <a href="#" class="btn">Syllabus</a>
+                                    <a href="#" class="btn">Notes</a>
+                                    <a href="#" class="btn">Question Bank</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="card-header"><i class="fas fa-square-root-alt"></i><h3>Mathematics for Computing</h3></div>
+                            <div class="card-body">
+                                <p>Math syllabus, solved notes & question papers.</p>
+                                <div class="card-buttons">
+                                    <a href="#" class="btn">Syllabus</a>
+                                    <a href="#" class="btn">Notes</a>
+                                    <a href="#" class="btn">Question Bank</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="card-header"><i class="fab fa-python"></i><h3>Python Programming</h3></div>
+                            <div class="card-body">
+                                <p>Python syllabus, lecture notes & coding question bank.</p>
+                                <div class="card-buttons">
+                                    <a href="#" class="btn">Syllabus</a>
+                                    <a href="#" class="btn">Notes</a>
+                                    <a href="#" class="btn">Question Bank</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="card-header"><i class="fas fa-spell-check"></i><h3>Verbal Ability and Speaking Skills</h3></div>
+                            <div class="card-body">
+                                <p>Verbal ability syllabus, notes & question bank for practice.</p>
+                                <div class="card-buttons">
+                                    <a href="#" class="btn">Syllabus</a>
+                                    <a href="#" class="btn">Notes</a>
+                                    <a href="#" class="btn">Question Bank</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other sections stay same... -->
+                <!-- scheduleContent, communityContent, premiumContent -->
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 UniConnect - University Student Portal. All rights reserved.</p>
+        <p>Designed with <i class="fas fa-heart" style="color: #ff6b6b;"></i> for students.</p>
+        <p>Visit <a style="color: beige;" href="https://dev-opify.netlify.app/" target="_blank">Dev-opify</a></p>
+    </footer>
+
+    <!-- Floating Chatbot Button -->
+    <button id="chatbot-toggle">💬</button>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot-window">
+        <div id="chat-header">Career Chatbot <span id="chat-close">×</span></div>
+        <div id="chat-messages"></div>
+        <input type="text" id="chat-input" placeholder="Type a message...">
+        <button id="send-btn">Send</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
